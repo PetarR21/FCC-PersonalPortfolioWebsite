@@ -1,0 +1,303 @@
+:root {
+    --main-white: #f0f0f0;
+    --main-red: #be3144;
+    --main-blue: #45567d;
+    --main-gray: #303841;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', 'sans-serif';
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--main-white);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+/* Header */
+
+#header {
+    background-color: var(--main-red);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#header .flex {
+    justify-content: flex-end;
+    height: 70px;
+}
+
+#header .container ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#header .container ul a {
+    padding: 20px;
+    font-size: 22px;
+    color: var(--main-white);
+}
+
+#header .container ul a:hover {
+    background-color: var(--main-blue);
+}
+
+/* About */
+
+#about {
+    margin-top: 70px;   
+    height: 900px;
+    background-color: #000;
+    background-image: linear-gradient( 62deg, #3a3d40 0%, #181719 100%);
+}
+
+#about .flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .flex h1 {
+    font-size: 60px;
+    font-family: 'Raleway';
+    text-align: center;
+}
+
+#about .flex p {
+    color: var(--main-red);
+    font-size: 30px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Work */
+#work{
+    background-color: var(--main-blue);
+    height: 1400px;
+}
+
+#work .card{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+#work .card img{
+    height: 380px;
+    width: 100%;
+    object-fit: fill;
+    
+}
+
+#work .card .project-title{
+    height: 68px;
+    background-color: var(--main-gray);
+    text-align: center;
+    padding: 20px 5px;
+    font-size: 20px;
+    color: var(--main-white);
+}
+
+#work .code{
+    color: var(--main-gray);
+    transition: color 0.3s ease-in;
+}
+
+#work .card:hover .code{
+    color: #ff7f50;
+}
+
+#work h2{
+    display: block;
+    text-align: center;
+    font-size: 42px;
+    font-family: 'Raleway';
+    border-bottom: 3px solid var(--main-white);
+    margin: 80px auto 40px auto;
+}
+
+#work .flex{
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#work-button{
+    padding: 10px 20px;
+    background-color: var(--main-gray);
+    height: 50px;
+    width: 150px;
+    color: var(--main-white);
+    text-align: center;
+    font-size: 20px;
+    
+} 
+
+#work-button i{
+    padding-left: 4px;
+}
+
+#work-button:hover i{
+    transform: translateX(3px);
+    transition: 0.3s ease-in;
+} 
+
+#work-button:hover{
+    background-color: var(--main-red);
+    transition: 0.3s ease-in;
+}
+
+/* Contact */
+#contact{
+    background-color: var(--main-gray);
+    height: 700px;
+}
+
+
+#contact .flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact .flex h1 {
+    font-size: 60px;
+    font-family: 'Raleway';
+    text-align: center;
+}
+
+#contact .flex p {
+    color: var(--main-white);
+    font-size: 18px;
+    font-style: italic;
+}
+
+#contact ul{
+    display: flex;
+    margin: 50px;
+}
+
+#contact a{
+    padding: 10px 20px;
+}
+
+#contact a{
+    color: var(--main-white);
+    font-size: 24px;
+    
+}
+
+#contact li {
+    transition: transform 0.3s ease-out;
+}
+
+#contact li:hover{
+    transform: translateY(8px);
+    
+}
+
+/* Footer */
+footer{
+    height: 110px;
+    background-color: var(--main-gray);
+    border-top: 3px solid var(--main-red);
+}
+
+footer .flex{
+    justify-content: space-around;
+}
+
+footer p,a{
+    font-size: 18px;
+    color: var(--main-white);
+}
+
+@media (max-width: 1350px){
+    #work-button{
+        margin: 50px 0;
+    }
+}
+
+@media (max-width: 1050px){
+    #contact ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+
+    #contact li{
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 650px){
+    #contact ul{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #contact li{
+        margin-bottom: 20px;
+    }
+
+    #header .flex{
+        justify-content: center;
+    }
+
+    #about{
+        height: 600px;
+    }
+}
+
+@media (max-width: 451px){
+    #contact .flex h1 {
+        font-size: 50px;
+        margin-top: 40px;
+    }
+
+    #contact li{
+        margin-bottom: 30px;
+        
+    }
+
+    #contact ul{
+        margin: 50px 0;
+    }
+
+    #contact{
+        height: auto;
+    }
+
+    footer p{
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 550px){
+    footer .flex{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer{
+        height: auto;
+    }
+}
